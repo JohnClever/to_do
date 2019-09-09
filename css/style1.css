@@ -1,0 +1,217 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    
+}
+
+/* Top Section */
+header {
+    height: 15vh;
+    border-bottom: solid 2px lightgray;
+
+}
+
+/* Logo Section */
+.logo{
+    float: left;
+
+}
+
+.logo img {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.logo p {
+    font-size: 20px;
+    margin: 20px;
+    float: right;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: purple;
+}
+
+
+/* Direction to other pages */
+.navBar {
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 40%;    
+}
+
+.navBar ul {
+    position: relative;
+    top: 50%;
+    display: table;
+    list-style-type: none;
+    height: 50%;
+    width: 60%;
+}
+
+.navBar ul li {
+    display: table-cell;
+    width: 40%;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    transition: all ease-in-out; 
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+
+}
+
+.navBar ul li a {
+    width: 100%;
+    height: 100%;
+
+}
+
+.navBar ul li:hover {
+    background: rgba(112, 96, 112, 0.6);
+}
+
+/* Page Navigation Section */
+.leftBar {
+    position: absolute;
+    height: 85vh;
+    width: 30vw;
+    border-right: solid 2px lightgray;
+}
+
+.topborder {
+    border-top: solid 1px lightgray;
+}
+
+.leftBar__div {
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    cursor: pointer;
+    /* transition: all ease-in-out 2s; */
+}
+
+.leftBar__div--nav {
+    height: 50%;
+    padding: 50px 0;
+    border-bottom: solid 1px lightgray; 
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+.leftBar__div--nav:hover {
+    background: rgba(112, 96, 112, 0.6);
+}
+
+/*.first_:hover + .leftBar__div--nav_slider {
+    display: block;
+    opacity: 1;
+}
+
+.leftBar__div--nav_slider:hover {
+    display: block;
+    opacity: 1;
+} */
+
+/* .leftBar__div--nav_slider {
+    background: blue;
+    width: 50%;
+    height: 20%;
+    margin-left: 50%;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: all ease-in-out 2s;
+}
+
+.leftBar__div--nav_slider div {
+    padding: 5px 0;
+    transition: all ease-in-out 2s;
+} */
+
+/* Information section */
+.rightBar {
+    position: absolute;
+    left: 30vw;
+    /* background: lightgray; */
+    width: 70vw;
+    height: 85vh;
+    padding: 50px;
+}
+
+.rightBar__content {
+    position: relative;
+    text-align: left;
+    background: rgba(211, 211, 211, 0.1);
+    line-height: 1.5;
+    width: calc(70vw - 100px);
+    height: calc(80vh - 100px);
+    padding: 20px;
+    overflow-y: auto; 
+    transition: all ease-in-out 0.5s;
+}
+
+/*.rightBar__content div {
+    position: absolute;
+    visibility: hidden;
+} */
+
+.rightBar__content .l1{
+    visibility: visible;
+}
+
+.rightBar__content h1 {
+    line-height: 3;
+    text-align: center;
+    color: rgb(114, 114, 114);
+}
+
+
+
+/* Responsive styling */
+
+
+@media screen and (max-width: 550px ){
+
+    header {
+        height: 30vh;
+    }
+
+    .logo {
+        float: none;
+    }
+
+    .navBar {
+        position: relative;
+        top: -2vh;
+        float: none;
+        height: 70%;
+        width: 60%;    
+    }
+    
+    .leftBar, .rightBar {
+        position: relative;
+        width: 100vw;
+        top: 0;
+        left: 0;
+    }
+
+    .leftBar {
+        height: unset;
+        /* background: red; */
+    }
+
+    .rightBar {
+        padding: 10px;
+    }
+
+    .rightBar__content{
+        width: calc(100vw - 20px);
+    }
+
+}
